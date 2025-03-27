@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - HuyAmo Mexican Restaurant</title>
+    <link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="stylesheet" href="mobile1.css" />
+
+  </head>
+  <body>
+    <div class="header-banner">
+      <span>FREE SHIPPING IN HANOI</span>
+      <span>FREE SHIPPING FOR ORDERS OVER $20</span>
+      <span>FREE SHIPPING IN HANOI</span>
+    </div>
+    
+    <div class="header">
+		<div class="hamburger" id="hamburger">&#9776;</div>
+     <div class="logo">
+  <a href="page1.html">
+    <img src="../img/Logo.png" />
+  </a>
+	</div>
+      <div class="nav">
+        <a href="newPost.html">NEW POST</a>
+        <a href="menu.html">MENU</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+      <div class="header-actions">
+        <input
+          type="text"
+          class="search-bar"
+          placeholder="What are you looking for..?"
+        />
+		<a href="checkout.html">
+		<i class="fa fa-shopping-bag"></i> </a>
+        <button>SIGN IN</button>
+      </div>
+    </div>
+<!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="newPost.html">NEW POST</a>
+  <a href="menu.html">MENU</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="login.html">SIGN IN</a>
+  <a href="yourcart.html">CART</a>
+</div>
+    <div class="login-container">
+      <div class="login-grid">
+        <!-- Login Column -->
+        <div class="login-form-column">
+          <h2>Customer Login</h2>
+          <div class="login-box">
+            <form>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-input"
+                  placeholder="Your email"
+                  required
+                />
+              </div>
+              <div class="form-group password-group">
+                <input
+                  type="password"
+                  class="form-input"
+                  placeholder="Password"
+                  required
+                />
+                <a href="#" class="forgot-link">Forgot?</a>
+              </div>
+              <button type="submit" class="login-btn">Sign In</button>
+            </form>
+            <p class="signup-link">New customer? <a href="#">Sign Up</a></p>
+          </div>
+        </div>
+
+        <!-- Image Column -->
+        <div class="login-image-column">
+          <img
+            src="../img/ảnh trang login .jpg"
+            alt="Login Image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-column">
+        <h3>Shop</h3>
+        <a href="#">Full Menu</a>
+        <a href="#">Meals Combo</a>
+        <a href="#">Cart</a>
+      </div>
+      <div class="footer-column">
+        <h3>Info</h3>
+        <a href="#">Locations</a>
+        <a href="#">Contacts</a>
+        <a href="#">My Account</a>
+      </div>
+      <div class="footer-column signup-section">
+        <h3>Sign Up</h3>
+        <p>For 20% off Your First Order</p>
+        <input type="email" placeholder="Your email" />
+        <button>→</button>
+      </div>
+      <div class="footer-column payment-icons">
+        <img src="../img/icon phương thức thanh toán.png" />
+      </div>
+    </div>
+    
+    </div>
+  </body>
+<div id="greetingPopup" class="popup-overlay" style="display: none;">
+  <div class="popup-content">
+    <h2>🎉 Hello Huy Anh handsome!</h2>
+    <p>Welcome back to HuyAmo 🌮</p>
+    <button id="goMenuBtn" class="popup-go-btn">Start</button>
+  </div>
+</div>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const loginForm = document.querySelector("form");
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // Ngăn reload trang
+
+    const emailInput = document.querySelector('input[type="email"]');
+    const email = emailInput.value.trim();
+
+    if (email) {
+      const popup = document.getElementById("greetingPopup");
+      popup.style.display = "flex";
+      localStorage.setItem("userEmail", email);
+
+      // Người dùng tự nhấn nút để tiếp tục
+      document.getElementById("goMenuBtn").addEventListener("click", function () {
+        window.location.href = "menu.html";
+      });
+
+    } else {
+      alert("Please enter your email.");
+    }
+  });
+});
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const mobileNav = document.getElementById("mobileNav");
+
+    hamburger.addEventListener("click", function () {
+      mobileNav.classList.toggle("show");
+    });
+  });
+</script>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - HuyAmo Mexican Restaurant</title>
+    <link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="stylesheet" href="mobile1.css" />
+
+  </head>
+  <body>
+  
+    <div class="header-banner">
+      <span>FREE SHIPPING IN HANOI</span>
+      <span>FREE SHIPPING FOR ORDERS OVER $20</span>
+      <span>FREE SHIPPING IN HANOI</span>
+    </div>
+    
+    <div class="header">
+		<div class="hamburger" id="hamburger">&#9776;</div>
+    <div class="logo">
+  <a href="page1.html">
+    <img src="../img/Logo.png" />
+  </a>
+	</div>
+      <div class="nav">
+        <a href="newPost.html">NEW POST</a>
+        <a href="menu.html">MENU</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+      <div class="header-actions">
+        <input
+          type="text"
+          class="search-bar"
+          placeholder="What are you looking for..?"
+        />
+		<a href="checkout.html">
+		<i class="fa fa-shopping-bag"></i> </a>
+        <a href="login.html">
+  <button>SIGN IN</button> </a>
+      </div>
+    </div>
+<!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="newPost.html">NEW POST</a>
+  <a href="menu.html">MENU</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="login.html">SIGN IN</a>
+  <a href="yourcart.html">CART</a>
+</div>
+    <div class="container">
+      <div class="cart-section">
+        <h2>Your Cart</h2>
+		<table class="cart-table">
+  <tr>
+    <th>Product</th>
+    <th>Price</th>
+    <th>Qty</th>
+  </tr>
+</table>
+      </div>
+
+      <!-- Checkout Section -->
+      <div class="checkout-section">
+		<div class="footer-column payment-icons">
+        <img src="../img/icon trang đặt hàng.png" />
+      </div>
+        <h3>Please fill in the delivery address and the recipient's phone number.</h3>
+  <input type="text" placeholder="Address" id="addressInput" />
+  <input type="text" placeholder="Phone number" id="phoneInput" />
+  <p id="phoneError" style="color: red; display: none;">Please enter a valid phone number.</p>
+
+        <h4>Add a note to your order</h4>
+        <textarea placeholder="Write your note here..."></textarea>
+
+        <h3>Subtotal $30.97</h3>
+        <p>You get free shipping for this order.</p>
+
+		<button class="checkout-btn" onclick="window.location.href='yourcart.html'">Check Out</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-column">
+        <h3>Shop</h3>
+        <a href="#">Full Menu</a>
+        <a href="#">Meals Combo</a>
+        <a href="#">Cart</a>
+      </div>
+      <div class="footer-column">
+        <h3>Info</h3>
+        <a href="#">Locations</a>
+        <a href="#">Contacts</a>
+        <a href="#">My Account</a>
+      </div>
+      <div class="footer-column signup-section">
+        <h3>Sign Up</h3>
+        <p>For 20% off Your First Order</p>
+        <input type="email" placeholder="Your email" />
+        <button>→</button>
+      </div>
+      <div class="footer-column payment-icons">
+        <img src="../img/icon phương thức thanh toán.png" />
+      </div>
+    </div>
+  </body>
+  <script>
+const phoneInput = document.getElementById("phoneInput");
+const phoneError = document.getElementById("phoneError");
+
+phoneInput.addEventListener("input", function() {
+  if (phoneInput.value.length > 10) {
+    phoneError.style.display = "block";
+    phoneInput.value = phoneInput.value.slice(0, 10); // Giới hạn độ dài
+  } else {
+    phoneError.style.display = "none";
+  }
+});
+
+function validateCheckout() {
+  window.location.href = "yourcart.html"; // 
+
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const addressInput = document.getElementById("addressInput");
+    const phoneInput = document.getElementById("phoneInput");
+    const checkoutBtn = document.querySelector(".checkout-btn");
+    const phoneError = document.getElementById("phoneError");
+
+    const savedAddress = localStorage.getItem("userAddress");
+    const savedPhone = localStorage.getItem("userPhone");
+
+    if (savedAddress) addressInput.value = savedAddress;
+    if (savedPhone) phoneInput.value = savedPhone;
+
+    if (checkoutBtn) {
+      checkoutBtn.addEventListener("click", function (e) {
+        const address = addressInput.value.trim();
+        const phone = phoneInput.value.trim();
+
+        const phonePattern = /^[0-9]{8,15}$/;
+
+        if (!phonePattern.test(phone)) {
+          e.preventDefault(); 
+          phoneError.style.display = "block";
+          return;
+        }
+
+        phoneError.style.display = "none";
+        localStorage.setItem("userAddress", address);
+        localStorage.setItem("userPhone", phone);
+      });
+    }
+  });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const cartTable = document.querySelector(".cart-table");
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const renderCart = () => {
+    cartTable.innerHTML = `
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Action</th>
+      </tr>
+    `;
+
+    cart.forEach((item, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td class="product-info">
+          <img src="${item.img}" alt="${item.name}" />
+          <span>${item.name}</span>
+        </td>
+        <td class="price">$${parseFloat(item.price.replace("$", ""))}</td>
+        <td>
+          <input type="number" min="1" value="${item.qty}" data-index="${index}" class="qty-input"/>
+        </td>
+        <td><button class="remove-btn" data-index="${index}">❌</button></td>
+      `;
+      cartTable.appendChild(row);
+    });
+
+    updateTotal();
+  };
+
+  const updateTotal = () => {
+    let subtotal = 0;
+    cart.forEach((item) => {
+      const price = parseFloat(item.price.replace("$", ""));
+      subtotal += item.qty * price;
+    });
+
+    // Hiển thị tổng tiền nếu có phần tử hiển thị
+    let subtotalEl = document.querySelector(".cart-subtotal");
+    if (!subtotalEl) {
+      subtotalEl = document.createElement("h3");
+      subtotalEl.className = "cart-subtotal";
+      cartTable.parentElement.appendChild(subtotalEl);
+    }
+    subtotalEl.innerText = `Subtotal: $${subtotal.toFixed(2)}`;
+  };
+
+  // Lắng nghe sự kiện thay đổi số lượng
+  cartTable.addEventListener("input", function (e) {
+    if (e.target.classList.contains("qty-input")) {
+      const index = e.target.dataset.index;
+      const newQty = parseInt(e.target.value);
+      if (newQty >= 1) {
+        cart[index].qty = newQty;
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateTotal();
+      }
+    }
+  });
+
+  // Lắng nghe sự kiện xoá sản phẩm
+  cartTable.addEventListener("click", function (e) {
+    if (e.target.classList.contains("remove-btn")) {
+      const index = e.target.dataset.index;
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
+  });
+
+  renderCart();
+});
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const mobileNav = document.getElementById("mobileNav");
+
+    hamburger.addEventListener("click", function () {
+      mobileNav.classList.toggle("show");
+    });
+  });
+</script>
+</html>

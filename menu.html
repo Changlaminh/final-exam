@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HuyAmo - Mexico Restaurant</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="stylesheet" href="mobile1.css" />
+
+  </head>
+  <body>
+
+    <div class="header-banner">
+      <span>FREE SHIPPING IN HANOI</span>
+      <span>FREE SHIPPING FOR ORDERS OVER $20</span>
+      <span>FREE SHIPPING IN HANOI</span>
+    </div>
+    
+    <div class="header">
+	<div class="hamburger" id="hamburger">&#9776;</div>
+      <div class="logo">
+  <a href="page1.html">
+    <img src="../img/Logo.png" />
+  </a>
+	</div>
+      <div class="nav">
+        <a href="newPost.html">NEW POST</a>
+        <a href="menu.html">MENU</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+      <div class="header-actions">
+        <input
+          type="text"
+          class="search-bar"
+          placeholder="What are you looking for..?"
+        />
+		<a href="yourcart.html">
+		<i class="fa fa-shopping-bag"></i> </a>
+        <a href="login.html">
+  <button>SIGN IN</button> </a>
+      </div>
+    </div>
+<!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="newPost.html">NEW POST</a>
+  <a href="menu.html">MENU</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="login.html">SIGN IN</a>
+  <a href="yourcart.html">CART</a>
+</div>
+<div class="sidebar">
+  <button class="favorites-button">❤️ Show My Favorites</button>
+  <div class="range-container">
+    <div class="range-header">
+      <h4>Range</h4>
+      <span class="range-toggle">-</span> 
+    </div>
+    <hr />
+    <div class="range-options">
+      <a href="#appetizers">Appetizers</a>
+      <a href="#main-courses">Main Courses</a>
+      <a href="#desserts">Desserts</a>
+      <a href="#beverages">Beverages</a>
+      <a href="#combo">Combo</a>
+      <a href="#kids-menu">Kids' Menu</a>
+      <a href="#vegetarian-dishes">Vegetarian Dishes</a>
+    </div>
+  </div>
+</div>
+
+      <div class="main-content">
+        <div class="menu-section">
+          <h2 id="appetizers">Entradas - Appetizers</h2>
+          <p>
+            A burst of flavor from the very first bite! Gooey melted cheese, creamy avocado, spicy chili, and crispy corn tortillas – the perfect way to start the feast.
+          </p>
+
+          <div class="menu-grid">
+            <div class="menu-item" data-index="0">
+              <img src="../img/Khai vị/Guacamole Fresco .jpg" alt="Guacamole Fresco" />
+              <h3>Guacamole Fresco</h3>
+              <p class="price">$6.99</p>
+              <button>Add to cart $6.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="1">
+              <img src="../img/Khai vị/Queso Fundido .jpg" alt="Queso Fundido" />
+              <h3>Queso Fundido</h3>
+              <p class="price">$8.99</p>
+              <button>Add to cart $8.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="2">
+              <img src="../img/Khai vị/Nachos Supremos .jpg" alt="Nachos Supremos" />
+              <h3>Nachos Supremos</h3>
+              <p class="price">$9.99</p>
+              <button>Add to cart $9.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="3">
+              <img src="../img/Khai vị/Ceviche de Camarón .jpg" alt="Ceviche de Camarón" />
+              <h3>Ceviche de Camarón</h3>
+              <p class="price">$11.99</p>
+              <button>Add to cart $11.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item"data-index="4">
+              <img src="../img/Khai vị/Elote Asado .jpg" alt="Elote Asado" />
+              <h3>Elote Asado</h3>
+              <p class="price">$5.99</p>
+              <button>Add to cart $5.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+          </div>
+
+          <h2 id="main-courses">Platos Fuertes - Main Courses</h2>
+          <p>
+            Bold spices, smoky grilled meats, and soft corn tortillas – all coming together in every bite. Traditional flavors in every dish!
+          </p>
+
+          <div class="menu-grid">
+            <div class="menu-item" data-index="5">
+              <img src="../img/Món chính/Tacos al Pastor .jpg" alt="Tacos al Pastor" />
+              <h3>Tacos al Pastor</h3>
+              <p class="price">$12.99</p>
+              <button>Add to cart $12.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="6">
+              <img src="../img/Món chính/Tacos de Carnitas .jpg" alt="Tacos de Carnitas" />
+              <h3>Tacos de Carnitas</h3>
+              <p class="price">$11.99</p>
+              <button>Add to cart $11.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="7">
+              <img src="../img/Món chính/Tacos de Barbacoa .jpg" alt="Tacos de Barbacoa" />
+              <h3>Tacos de Barbacoa</h3>
+              <p class="price">$13.99</p>
+              <button>Add to cart $13.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item"data-index="8">
+              <img src="../img/Món chính/Burrito Grande .jpg" alt="Burrito Grande" />
+              <h3>Burrito Grande</h3>
+              <p class="price">$14.99</p>
+              <button>Add to cart $14.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="9">
+              <img src="../img/Món chính/Chimichanga .jpg" alt="Chimichanga" />
+              <h3>Chimichanga</h3>
+              <p class="price">$13.99</p>
+              <button>Add to cart $13.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="10">
+              <img src="../img/Món chính/Enchiladas Verdes .jpg" alt="Enchiladas Verdes" />
+              <h3>Enchiladas Verdes</h3>
+              <p class="price">$14.99</p>
+              <button>Add to cart $14.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="11">
+              <img src="../img/Món chính/Enchiladas Rojas .jpg" alt="Enchiladas Rojas" />
+              <h3>Enchiladas Rojas</h3>
+              <p class="price">$15.99</p>
+              <button>Add to cart $15.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="12">
+              <img src="../img/Món chính/fajitas-mixtas .jpg" alt="Fajitas Mixtas" />
+              <h3>Fajitas Mixtas</h3>
+              <p class="price">$18.99</p>
+              <button>Add to cart $18.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="13">
+              <img src="../img/Món chính/Carne Asada .jpg" alt="Carne Asada" />
+              <h3>Carne Asada</h3>
+              <p class="price">$17.99</p>
+              <button>Add to cart $17.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="14">
+              <img src="../img/Món chính/Chiles Rellenos .jpg" alt="Chiles Rellenos" />
+              <h3>Chiles Rellenos</h3>
+              <p class="price">$16.99</p>
+              <button>Add to cart $16.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+          </div>
+
+          <h2 id="desserts">Postres - Desserts</h2>
+          <p>
+            Sweet, crispy, and creamy. Cinnamon-sugar-coated churros, silky caramel flan, and refreshing fruit-based treats – the perfect way to end a meal.
+          </p>
+
+          <div class="menu-grid">
+            <div class="menu-item" data-index="15">
+              <img src="../img/Tráng miệng/Churros con Chocolate .jpg" alt="Churros con Chocolate" />
+              <h3>Churros con Chocolate</h3>
+              <p class="price">$6.99</p>
+              <button>Add to cart $6.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="16">
+              <img src="../img/Tráng miệng/Tres Leches Cake .jpg" alt="Tres Leches Cake" />
+              <h3>Tres Leches Cake</h3>
+              <p class="price">$7.99</p>
+              <button>Add to cart $7.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="17">
+              <img src="../img/Tráng miệng/Flan Mexicano .jpg" alt="Flan Mexicano" />
+              <h3>Flan Mexicano</h3>
+              <p class="price">$6.99</p>
+              <button>Add to cart $6.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="18">
+              <img src="../img/Tráng miệng/Arroz con Leche .jpg" alt="Arroz con Leche" />
+              <h3>Arroz con Leche</h3>
+              <p class="price">$5.99</p>
+              <button>Add to cart $5.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="19">
+              <img src="../img/Tráng miệng/Pastel de Elote .jpg" alt="Pastel de Elote" />
+              <h3>Pastel de Elote</h3>
+              <p class="price">$6.99</p>
+              <button>Add to cart $6.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+          </div>
+
+          <h2 id="beverages">Bebidas - Beverages</h2>
+          <p>
+            Chilled, refreshing, and full of fiesta spirit! From margaritas and cinnamon-spiced coffee to fresh fruit juices, every sip awakens the taste buds.
+          </p>
+
+          <div class="menu-grid">
+            <div class="menu-item"data-index="20">
+              <img src="../img/Đồ uống/Horchata .jpg" alt="Horchata" />
+              <h3>Horchata</h3>
+              <p class="price">$4.99</p>
+              <button>Add to cart $4.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="21">
+              <img src="../img/Đồ uống/Agua de Jamaica .jpg" alt="Agua de Jamaica" />
+              <h3>Agua de Jamaica</h3>
+              <p class="price">$4.99</p>
+              <button>Add to cart $4.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="22">
+              <img src="../img/Đồ uống/Michelada .jpg" alt="Michelada" />
+              <h3>Michelada</h3>
+              <p class="price">$7.99</p>
+              <button>Add to cart $7.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="23">
+              <img src="../img/Đồ uống/Margarita Clásica .jpg" alt="Margarita Clásica" />
+              <h3>Margarita Clásica</h3>
+              <p class="price">$9.99</p>
+              <button>Add to cart $9.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="24">
+              <img src="../img/Đồ uống/Piña Colada Mexicana .jpg" alt="Piña Colada Mexicana" />
+              <h3>Piña Colada Mexicana</h3>
+              <p class="price">$10.99</p>
+              <button>Add to cart $10.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+          </div>
+
+          <h2 id="combo">Combos Especiales - Combo</h2>
+          <p>
+            A full-flavored experience in one meal! The perfect combination of tacos, burritos, nachos, and fajitas for those who want to taste it all.
+          </p>
+
+          <div class="menu-grid">
+            <div class="menu-item" data-index="25">
+              <img src="../img/Combos/Combo Tacos Fiesta .jpg" alt="Combo Tacos Fiesta" />
+              <h3>Combo Tacos Fiesta</h3>
+              <p class="price">$16.99</p>
+              <button>Add to cart $16.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="26">
+              <img src="../img/Combos/Combo Enchiladas Lovers .jpg" alt="Combo Enchiladas Lovers" />
+              <h3>Combo Enchiladas Lovers</h3>
+              <p class="price">$17.99</p>
+              <button>Add to cart $17.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="27">
+              <img src="../img/Combos/Combo Parrillada .jpg" alt="Combo Parrillada" />
+              <h3>Combo Parrillada</h3>
+              <p class="price">$22.99</p>
+              <button>Add to cart $22.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="28">
+              <img src="../img/Combos/Combo Burrito King .jpg" alt="Combo Burrito King" />
+              <h3>Combo Burrito King</h3>
+              <p class="price">$14.99</p>
+              <button>Add to cart $14.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="29">
+              <img src="../img/Combos/Combo Quesadilla Deluxe .jpg" alt="Combo Quesadilla Deluxe" />
+              <h3>Combo Quesadilla Deluxe</h3>
+              <p class="price">$13.99</p>
+              <button>Add to cart $13.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+          </div>
+
+          <h2 id="kids-menu">Menú para Niños - Kids' Menu</h2>
+          <p>
+           Small, tasty, and easy to enjoy! Colorful and flavorful dishes that make mealtime fun and exciting for kids.
+          </p>
+
+          <div class="menu-grid">
+            <div class="menu-item" data-index="30">
+              <img src="../img/Thực đơn trẻ em/Quesadilla de Niños .jpg" alt="Quesadilla de Niños" />
+              <h3>Quesadilla de Niños</h3>
+              <p class="price">$6.99</p>
+              <button>Add to cart $6.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="31">
+              <img src="../img/Thực đơn trẻ em/Papas Fritas con Queso .jpg" alt="Papas Fritas con Queso" />
+              <h3>Papas Fritas con Queso</h3>
+              <p class="price">$5.99</p>
+              <button>Add to cart $5.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="32">
+              <img src="../img/Thực đơn trẻ em/Gelatina de Fresa .jpg" alt="Gelatina de Fresa" />
+              <h3>Gelatina de Fresa</h3>
+              <p class="price">$4.99</p>
+              <button>Add to cart $4.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+          </div>
+
+          <h2 id="vegetarian-dishes">Platos Vegetarianos - Vegetarian Dishes</h2>
+          <p>
+            Fresh, flavorful, and just as exciting! Black beans, avocado, Oaxaca cheese, grilled vegetables, and mildly spicy salsa come together in every bite. Traditional flavors that are just as irresistible—no meat needed!
+          </p>
+
+          <div class="menu-grid">
+            <div class="menu-item" data-index="33">
+              <img src="../img/(Món chay)/Tacos de Hongos .jpg" alt="Tacos de Hongos" />
+              <h3>Tacos de Hongos</h3>
+              <p class="price">$10.99</p>
+              <button>Add to cart $10.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+            <div class="menu-item" data-index="34">
+              <img src="../img/(Món chay)/Enchiladas de Espinaca .jpg" alt="Enchiladas de Espinaca" />
+              <h3>Enchiladas de Espinaca</h3>
+              <p class="price">$12.99</p>
+              <button>Add to cart $12.99</button>
+              <span class="favorite-icon">♡</span>
+			</div>
+            <div class="menu-item" data-index="35">
+              <img src="../img/(Món chay)/Burrito Vegetariano .jpg" alt="Burrito Vegetariano" />
+              <h3>Burrito Vegetariano</h3>
+              <p class="price">$11.99</p>
+              <button>Add to cart $11.99</button>
+              <span class="favorite-icon">♡</span>
+            </div>
+         
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-column">
+        <h3>Shop</h3>
+        <a href="#">Full Menu</a>
+        <a href="#">Meals Combo</a>
+        <a href="#">Cart</a>
+      </div>
+      <div class="footer-column">
+        <h3>Info</h3>
+        <a href="#">Locations</a>
+        <a href="#">Contacts</a>
+        <a href="#">My Account</a>
+      </div>
+      <div class="footer-column signup-section">
+        <h3>Sign Up</h3>
+        <p>For 20% off Your First Order</p>
+        <input type="email" placeholder="Your email" />
+        <button>→</button>
+      </div>
+      <div class="footer-column payment-icons">
+        <img src="../img/icon phương thức thanh toán.png" />
+      </div>
+    </div>
+<div id="dish-popup" class="dish-popup">
+  <div class="popup-content">
+    <span class="close-popup">&times;</span>
+    <img src="../img/(Món chay)/Enchiladas de Espinaca .jpg" alt="Enchiladas de Espinaca">
+    <h2>Enchiladas de Espinaca</h2>
+    <p class="popup-description">
+      Enchiladas de Espinaca are the perfect combination of fresh spinach
+      and melted cheese, rolled in soft corn tortillas. All covered in a
+      rich, aromatic cream sauce, creating a smooth yet rich flavor. Each
+      bite is a delicate balance of rich, nutty and refreshing - a delicious
+      vegetarian option!
+    </p>
+    <p class="popup-price">$12.99</p>
+    <button class="add-to-cart-btn">Add to cart</button>
+  </div>
+</div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const rangeHeader = document.querySelector(".range-header");
+      const rangeOptions = document.querySelector(".range-options");
+      const rangeToggle = document.querySelector(".range-toggle");
+
+      rangeHeader.addEventListener("click", function() {
+        if (rangeOptions.style.display === "none") {
+          rangeOptions.style.display = "block";
+          rangeToggle.textContent = "+";
+        } else {
+          rangeOptions.style.display = "none";
+          rangeToggle.textContent = "-";
+        }
+      });
+    });
+  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+  
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Mảng chứa thông tin chi tiết của các món ăn
+  const dishDetails = [
+  {
+    image: "../img/Khai vị/Guacamole Fresco .jpg",
+    name: "Guacamole Fresco",
+    price: "$6.99",
+    description: "Creamy avocado dip with fresh tomatoes, onions, cilantro, and lime juice. Served with crispy tortilla chips."
+  },
+  {
+    image: "../img/Khai vị/Queso Fundido .jpg",
+    name: "Queso Fundido",
+    price: "$8.99",
+    description: "Melted cheese with chorizo, onions, and peppers. Served with warm tortillas."
+  },
+  {
+    image: "../img/Khai vị/Nachos Supremos .jpg",
+    name: "Nachos Supremos",
+    price: "$9.99",
+    description: "Crispy tortilla chips topped with melted cheese, beans, ground beef, pico de gallo, sour cream, and guacamole."
+  },
+  {
+    image: "../img/Khai vị/Ceviche de Camarón .jpg",
+    name: "Ceviche de Camarón",
+    price: "$11.99",
+    description: "Fresh shrimp marinated in lime juice with tomatoes, onions, cilantro, and jalapeños. Served with tostadas."
+  },
+  {
+    image: "../img/Khai vị/Elote Asado .jpg",
+    name: "Elote Asado",
+    price: "$5.99",
+    description: "Grilled corn on the cob, slathered with mayonnaise, cotija cheese, chili powder, and lime juice."
+  },
+  {
+    image: "../img/Món chính/Tacos al Pastor .jpg",
+    name: "Tacos al Pastor",
+    price: "$12.99",
+    description: "Marinated pork cooked on a vertical rotisserie, served in corn tortillas with onions, cilantro, and pineapple."
+  },
+  {
+    image: "../img/Món chính/Tacos de Carnitas .jpg",
+    name: "Tacos de Carnitas",
+    price: "$11.99",
+    description: "Slow-cooked, tender, and flavorful pulled pork, served in corn tortillas with onions and cilantro."
+  },
+  {
+    image: "../img/Món chính/Tacos de Barbacoa .jpg",
+    name: "Tacos de Barbacoa",
+    price: "$13.99",
+    description: "Slow-cooked, shredded beef, seasoned with spices, served in corn tortillas with onions and cilantro."
+  },
+  {
+    image: "../img/Món chính/Burrito Grande .jpg",
+    name: "Burrito Grande",
+    price: "$14.99",
+    description: "Large flour tortilla filled with rice, beans, choice of meat, cheese, lettuce, pico de gallo, and sour cream."
+  },
+  {
+    image: "../img/Món chính/Chimichanga .jpg",
+    name: "Chimichanga",
+    price: "$13.99",
+    description: "Deep-fried burrito filled with rice, beans, choice of meat, and cheese. Topped with sour cream and guacamole."
+  },
+  {
+    image: "../img/Món chính/Enchiladas Verdes .jpg",
+    name: "Enchiladas Verdes",
+    price: "$14.99",
+    description: "Corn tortillas filled with chicken or cheese, topped with green tomatillo sauce and melted cheese. Served with rice and beans."
+  },
+  {
+    image: "../img/Món chính/Enchiladas Rojas .jpg",
+    name: "Enchiladas Rojas",
+    price: "$15.99",
+    description: "Corn tortillas filled with chicken or cheese, topped with red chili sauce and melted cheese. Served with rice and beans."
+  },
+  {
+    image: "../img/Món chính/fajitas-mixtas .jpg",
+    name: "Fajitas Mixtas",
+    price: "$18.99",
+    description: "Grilled strips of steak, chicken, and shrimp with onions and peppers. Served with warm tortillas, pico de gallo, sour cream, and guacamole."
+  },
+  {
+    image: "../img/Món chính/Carne Asada .jpg",
+    name: "Carne Asada",
+    price: "$17.99",
+    description: "Grilled marinated steak, served with rice, beans, and tortillas."
+  },
+  {
+    image: "../img/Món chính/Chiles Rellenos .jpg",
+    name: "Chiles Rellenos",
+    price: "$16.99",
+    description: "Poblano peppers stuffed with cheese, battered, and fried. Topped with sauce and served with rice and beans."
+  },
+  {
+    image: "../img/Tráng miệng/Churros con Chocolate .jpg",
+    name: "Churros con Chocolate",
+    price: "$6.99",
+    description: "Fried dough pastries coated in cinnamon sugar. Served with hot chocolate for dipping."
+  },
+  {
+    image: "../img/Tráng miệng/Tres Leches Cake .jpg",
+    name: "Tres Leches Cake",
+    price: "$7.99",
+    description: "Sponge cake soaked in three types of milk (evaporated, condensed, and whole). Topped with whipped cream."
+  },
+  {
+    image: "../img/Tráng miệng/Flan Mexicano .jpg",
+    name: "Flan Mexicano",
+    price: "$6.99",
+    description: "Creamy custard dessert with a caramel topping."
+  },
+  {
+    image: "../img/Tráng miệng/Arroz con Leche .jpg",
+    name: "Arroz con Leche",
+    price: "$5.99",
+    description: "Mexican rice pudding with milk, cinnamon, and raisins."
+  },
+  {
+    image: "../img/Tráng miệng/Pastel de Elote .jpg",
+    name: "Pastel de Elote",
+    price: "$6.99",
+    description: "Sweet corn cake, often served warm."
+  },
+  {
+    image: "../img/Đồ uống/Horchata .jpg",
+    name: "Horchata",
+    price: "$4.99",
+    description: "Sweet rice milk beverage flavored with cinnamon."
+  },
+  {
+    image: "../img/Đồ uống/Agua de Jamaica .jpg",
+    name: "Agua de Jamaica",
+    price: "$4.99",
+    description: "Refreshing hibiscus tea beverage."
+  },
+  {
+    image: "../img/Đồ uống/Michelada .jpg",
+    name: "Michelada",
+    price: "$7.99",
+    description: "Savory beer cocktail with lime juice, chili powder, and spices."
+  },
+  {
+    image: "../img/Đồ uống/Margarita Clásica .jpg",
+    name: "Margarita Clásica",
+    price: "$9.99",
+    description: "Classic margarita with tequila, lime juice, and triple sec."
+  },
+  {
+    image: "../img/Đồ uống/Piña Colada Mexicana .jpg",
+    name: "Piña Colada Mexicana",
+    price: "$10.99",
+    description: "Creamy coconut and pineapple drink, often with rum."
+  },
+  {
+    image: "../img/Combos/Combo Tacos Fiesta .jpg",
+    name: "Combo Tacos Fiesta",
+    price: "$16.99",
+    description: "A fiesta of tacos with various fillings, perfect for sharing."
+  },
+  {
+    image: "../img/Combos/Combo Enchiladas Lovers .jpg",
+    name: "Combo Enchiladas Lovers",
+    price: "$17.99",
+    description: "A variety of enchiladas with different sauces and fillings."
+  },
+  {
+    image: "../img/Combos/Combo Parrillada .jpg",
+    name: "Combo Parrillada",
+    price: "$22.99",
+    description: "A mixed grill platter with various meats and vegetables."
+  },
+  {
+    image: "../img/Combos/Combo Burrito King .jpg",
+    name: "Combo Burrito King",
+    price: "$14.99",
+    description: "A large burrito combo with your choice of fillings."
+  },
+  {
+    image: "../img/Combos/Combo Quesadilla Deluxe .jpg",
+    name: "Combo Quesadilla Deluxe",
+    price: "$13.99",
+    description: "A deluxe quesadilla combo with various fillings and toppings."
+  },
+  {
+    image: "../img/Thực đơn trẻ em/Quesadilla de Niños .jpg",
+    name: "Quesadilla de Niños",
+    price: "$6.99",
+    description: "A kid-sized quesadilla, simple and cheesy."
+  },
+  {
+    image: "../img/Thực đơn trẻ em/Papas Fritas con Queso .jpg",
+    name: "Papas Fritas con Queso",
+    price: "$5.99",
+    description: "French fries topped with melted cheese."
+  },
+  {
+    image: "../img/Thực đơn trẻ em/Gelatina de Fresa .jpg",
+    name: "Gelatina de Fresa",
+    price: "$4.99",
+    description: "Strawberry gelatin dessert, a colorful and fun treat."
+  },
+  {
+    image: "../img/(Món chay)/Tacos de Hongos .jpg",
+    name: "Tacos de Hongos",
+    price: "$10.99",
+    description: "Tacos filled with sautéed mushrooms, onions, and peppers."
+  },
+  {
+    image: "../img/(Món chay)/Enchiladas de Espinaca .jpg",
+    name: "Enchiladas de Espinaca",
+    price: "$12.99",
+    description: "Corn tortillas filled with spinach and cheese, topped with creamy sauce."
+  },
+  {
+    image: "../img/(Món chay)/Burrito Vegetariano .jpg",
+    name: "Burrito Vegetariano",
+    price: "$11.99",
+    description: "Flour tortilla filled with rice, beans, vegetables, cheese, and salsa."
+  }
+];
+  // Lấy tất cả các phần tử menu-item
+  const menuItems = document.querySelectorAll(".menu-item");
+
+  // Lặp qua từng menu-item
+  menuItems.forEach(function(menuItem) {
+    // Thêm sự kiện click vào từng menu-item
+    menuItem.addEventListener("click", function() {
+      // Lấy data-index của món ăn được click
+      const index = this.dataset.index;
+
+      // Lấy thông tin chi tiết từ mảng dishDetails
+      const dish = dishDetails[index];
+
+      // Hiển thị popup
+      const popup = document.getElementById("dish-popup");
+      popup.style.display = "block";
+
+      // Cập nhật thông tin trong popup
+      const popupImage = popup.querySelector("img");
+      const popupName = popup.querySelector("h2");
+      const popupDescription = popup.querySelector(".popup-description");
+      const popupPrice = popup.querySelector(".popup-price");
+
+      popupImage.src = dish.image;
+      popupName.textContent = dish.name;
+      popupDescription.textContent = dish.description;
+      popupPrice.textContent = dish.price;
+    });
+  });
+
+  // Đóng popup khi nhấn vào dấu x
+  const closePopup = document.querySelector(".close-popup");
+  closePopup.addEventListener("click", function() {
+    const popup = document.getElementById("dish-popup");
+    popup.style.display = "none";
+  });
+
+  // Đóng popup khi nhấn vào bất kỳ đâu bên ngoài popup
+  window.addEventListener("click", function(event) {
+    const popup = document.getElementById("dish-popup");
+    if (event.target == popup) {
+      popup.style.display = "none";
+    }
+  });
+});
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const addToCartButtons = document.querySelectorAll(".menu-item button");
+
+    addToCartButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const itemElement = button.closest(".menu-item");
+        const name = itemElement.querySelector("h3").textContent;
+        const price = itemElement.querySelector(".price").textContent;
+        const img = itemElement.querySelector("img").getAttribute("src");
+
+        // Lấy cart hiện tại hoặc tạo mới
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Kiểm tra nếu sản phẩm đã có trong cart thì tăng số lượng
+        const existingItem = cart.find(item => item.name === name);
+        if (existingItem) {
+          existingItem.qty += 1;
+        } else {
+          cart.push({ name, price, img, qty: 1 });
+        }
+
+        // Lưu lại vào localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(`${name} has been added to your cart!`);
+      });
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const mobileNav = document.getElementById("mobileNav");
+
+    hamburger.addEventListener("click", function () {
+      mobileNav.classList.toggle("show");
+    });
+  });
+</script>
+
+</html>
